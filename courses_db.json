@@ -1,0 +1,214 @@
+[
+    {
+        "name": "Technical Team Test Course",
+        "type": "course",
+        "id": 1336,
+        "downloaded": true,
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "Description removal test",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=6547"
+            }
+        ]
+    },
+    {
+        "name": "ECON F471 RESOURCES & ENVIR ECON LS1",
+        "type": "course",
+        "id": 1335,
+        "downloaded": true,
+        "remain enrolled": 0,
+        "contents": [
+            {
+                "name": "HANDOUT",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=627"
+            },
+            {
+                "name": "01 Environmental Economics",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=768"
+            },
+            {
+                "name": "Travel Cost Method",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=1742"
+            },
+            {
+                "name": "Hedonic Price Model",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=2252"
+            },
+            {
+                "name": "social choice",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=4030"
+            },
+            {
+                "name": "Efficiency and Markets",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=5086"
+            },
+            {
+                "name": "market failure",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=5966"
+            },
+            {
+                "name": "property rights",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=5967"
+            },
+            {
+                "name": "pigovian fees",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=5969"
+            },
+            {
+                "name": "risk and uncertainty",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=6078"
+            },
+            {
+                "name": "Endangered Species",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=7107"
+            },
+            {
+                "name": "Extinction of Species",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=7186"
+            },
+            {
+                "name": "Development, Preservation and Conservation",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=7187"
+            },
+            {
+                "name": "Details of Study Material given",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=1784"
+            },
+            {
+                "name": "QUIZ 1- Resource and Environmental Economics",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=2251"
+            },
+            {
+                "name": "SYLLABUS MID-SEM",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=3866"
+            },
+            {
+                "name": "Assignment 1",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=4286"
+            },
+            {
+                "name": "Answer Sheet Distribution",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=4380"
+            },
+            {
+                "name": "ECON F471 Midsem Solution",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=4416"
+            },
+            {
+                "name": "Midsem Grading ECON F471",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=5255"
+            },
+            {
+                "name": "Pre Compre Totals- Resource and Environmental Economics",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=7106"
+            },
+            {
+                "name": "Comprehensive Examination Syllabus",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=7185"
+            },
+            {
+                "name": "Coase1960",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=5102"
+            },
+            {
+                "name": "Shapira & Zingales2017",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=5103"
+            },
+            {
+                "name": "quiz 2 solutions",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=6588"
+            }
+        ]
+    },
+    {
+        "name": "EEE F111 Electrical Sciences T9",
+        "type": "course",
+        "id": 1334,
+        "downloaded": true,
+        "remain enrolled": 0,
+        "contents": []
+    },
+    {
+        "name": "EEE F111 Electrical Sciences T8",
+        "type": "course",
+        "id": 1333,
+        "downloaded": true,
+        "remain enrolled": 0,
+        "contents": []
+    },
+    {
+        "name": "EEE F111 Electrical Sciences T7",
+        "type": "course",
+        "id": 1332,
+        "downloaded": true,
+        "remain enrolled": 0,
+        "contents": []
+    },
+    {
+        "name": "EEE F111 Electrical Sciences T6",
+        "type": "course",
+        "id": 1331,
+        "downloaded": true,
+        "remain enrolled": 0,
+        "contents": []
+    },
+    {
+        "name": "EEE F111 Electrical Sciences T5",
+        "type": "course",
+        "id": 1330,
+        "downloaded": true,
+        "remain enrolled": 0,
+        "contents": []
+    },
+    {
+        "name": "EEE F111 Electrical Sciences T4",
+        "type": "course",
+        "id": 1329,
+        "downloaded": true,
+        "remain enrolled": 0,
+        "contents": []
+    },
+    {
+        "name": "EEE F111 Electrical Sciences T3",
+        "type": "course",
+        "id": 1328,
+        "downloaded": true,
+        "remain enrolled": 0,
+        "contents": []
+    },
+    {
+        "name": "EEE F111 Electrical Sciences T2",
+        "type": "course",
+        "id": 1327,
+        "downloaded": true,
+        "remain enrolled": 0,
+        "contents": []
+    }
+]

@@ -27,35 +27,37 @@ def login(user=None, pwd=None):
 		print("Error")
 
 
-def get_all_courses():
-	"""Scrape CMS and return list of IDS of courses."""
-	ids = []
-	url = moodle_url + 'course/index.php?categoryid=5&browse=courses&perpage=5'
-
-	for i in range(0, 168):
-		r = sess.get(url, params={'page': str(i)})
-		soup = BeautifulSoup(r.text, 'html.parser')
-		courses = soup.find_all('div', {'class': 'coursename'})
-		for course in courses:
-			link = course.a['href']
-			c_id = linl[link.find('=') + 1:]
-			ids.append(c_id + '\n')
-
-	with open('all_ids.txt', 'w') as f:  # store in file to avoid having to scrape everytime
-		f.writelines(ids)
-
 
 def get_attr(text, param, offset=0, end_ch='"'):
 	"""Function to extract substring from a text."""
 	x = text.find(param) + offset  # left index of the substring
 	if x == offset - 1:
-		raise EOFError
+		raise EOFError  # in case the parameter is not found
 	y = text[x:].find(end_ch)  # right index of the substring
 	if y == -1:
 		substring = text[x:]
 	else:
 		substring = text[x:][:y]
 	return substring
+
+
+def get_all_courses():
+	"""Scrape CMS and return list of IDS of courses."""
+	ids = []
+	url = moodle_url + 'course/index.php?categoryid=5&browse=courses&perpage=5'
+	print('Getting course IDS of all courses.', end=' ')
+	for i in range(0, 168):
+		r = sess.get(url, params={'page': str(i)})
+		soup = BeautifulSoup(r.text, 'html.parser')
+		courses = soup.find_all('div', {'class': 'coursename'})
+		for course in courses:
+			link = course.a['href']
+			c_id = get_attr(link, '=', 1)
+			ids.append(c_id + '\n')
+
+	with open('all_ids.txt', 'w') as f:  # store in file to avoid having to scrape everytime
+		f.writelines(ids)
+	print('Done.')
 
 
 def get_enrol_payload(c, c_id):
@@ -95,7 +97,7 @@ def course_enrol(c_id):
 
 def course_unenrol(c_id):
 	"""Unenrol from a course."""
-	print("Unenrolling from", c_id)
+	print("Unenrolling from", c_id, end='. ')
 	course_url = moodle_url + 'course/view.php'
 	c = sess.get(course_url, params={'id': c_id})
 	if c.text[77:84] != 'Course:':
@@ -110,7 +112,7 @@ def course_unenrol(c_id):
 		'sesskey': sesskey
 	}
 	sess.post(unenrol_url, data=payload)
-	print('Unenrolled from', c_id)
+	print('Done.')
 
 
 def fold_contents(fold_url):
@@ -233,6 +235,8 @@ def download():
 
 def read_database(ids=[]):
 	"""Read courses_db and create a dict from it."""
+	if not os.path.isfile('courses_db.json'):
+		return [[], ids]
 	with open('courses_db.json', 'r') as f:
 		data = f.read()
 		if not data:  # in case the database is empty
@@ -254,12 +258,11 @@ def update_db():
 		if not data:
 			print('all_ids.txt is empty. Run get_all_courses once.')
 			return
-		ids = f.read().split('\n')
-
+		ids = data.split('\n')
 	db, ids = read_database(ids)
 
-	for c_id in ids:
-		remain_enrolled = course_enrol(c_id)
+	for c_id in ids[:10]:
+		remain_enrolled = course_enrol(c_id)  #TODO: Break up enrolment into small groups.
 		if remain_enrolled is -1:  # in case enrollment was unsuccessful
 			continue
 		course_data = get_course_links(c_id)
@@ -278,5 +281,5 @@ def main():
 
 if __name__ == '__main__':
 	login()
-	get_all_courses()  # required on first run
+	# get_all_courses()  # required on first run
 	main()
