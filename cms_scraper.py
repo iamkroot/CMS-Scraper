@@ -182,6 +182,7 @@ def download_file(file, folder):
 		print('Unable to access file. Check if you are logged in and enrolled.')
 		return
 	print(f"Downloading {file_name}.", end=' ')
+	file['real_name'] = file_name
 	file_path = os.path.join(folder, file_name)
 	if os.path.isfile(file_path):  # in case the file already exists
 		print('Already exists.')
@@ -261,7 +262,7 @@ def update_db():
 		ids = data.split('\n')
 	db, ids = read_database(ids)
 
-	for c_id in ids[:10]:
+	for c_id in ids[215:235]:
 		remain_enrolled = course_enrol(c_id)  #TODO: Break up enrolment into small groups.
 		if remain_enrolled is -1:  # in case enrollment was unsuccessful
 			continue
