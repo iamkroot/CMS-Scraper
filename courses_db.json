@@ -3536,5 +3536,92 @@
                 "real_name": "Lab 36_CHEM F337_GCC_2017.pptx"
             }
         ]
+    },
+    {
+        "name": "PHY F111MECH OSCILLATIONS & WAVE LS2",
+        "type": "course",
+        "id": 1263,
+        "downloaded": true,
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": " [UPDATED] SOLUTIONS (PART A + PART B) COMPREHENSIVE EXAM",
+                "type": "folder",
+                "contents": [
+                    {
+                        "name": "Solutions (Part A + Part B).rar",
+                        "type": "file",
+                        "url": "http://id.bits-hyderabad.ac.in/moodle/pluginfile.php/47210/mod_folder/content/0/Solutions%20%28Part%20A%20%2B%20Part%20B%29.rar?forcedownload=1",
+                        "real_name": "Solutions (Part A + Part B).rar"
+                    }
+                ]
+            },
+            {
+                "name": "HANDOUT FOR MEOW",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=358",
+                "real_name": "PHY F111_Handout_Sem I_2017-18.docx"
+            },
+            {
+                "name": "Lecture 1_introduction",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=1441",
+                "real_name": "lecture1_introduction.pdf"
+            },
+            {
+                "name": "Polar coordinates",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=1442",
+                "real_name": "polar coordinates ppts.rar"
+            },
+            {
+                "name": "angular momentum",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=1443",
+                "real_name": "angular momentum ppts.rar"
+            },
+            {
+                "name": "Rigid body motion",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=2397",
+                "real_name": "regid body motion.rar"
+            },
+            {
+                "name": "Noninertial systems",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=2636",
+                "real_name": "noninertial systems.rar"
+            },
+            {
+                "name": "central force motion",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=3719",
+                "real_name": "central force motion ppts.rar"
+            },
+            {
+                "name": "QUIZ-1 (SOLUTIONS)",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=2541",
+                "real_name": "QUIZ-1 (SOLUTIONS).zip"
+            },
+            {
+                "name": "MID-SEMESTER GRADING SHEET",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=5650",
+                "real_name": "Midsem Grading-PHY F111 (MEOW)(2017-18 SEM-I).pdf"
+            },
+            {
+                "name": "QUIZ-2 [SOLUTIONS]",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=5867",
+                "real_name": "quiz_2_Soln.rar"
+            },
+            {
+                "name": "PRE COMPRE MARKS [QUIZZES + MID SEM]",
+                "type": "file",
+                "url": "http://id.bits-hyderabad.ac.in/moodle/mod/resource/view.php?id=7230",
+                "real_name": "PRE COMPRE MARKS - MEOW.pdf"
+            }
+        ]
     }
 ]

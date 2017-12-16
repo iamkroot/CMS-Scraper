@@ -4,6 +4,8 @@ import json
 import os
 import shutil
 import configparser  # to access the configuration file
+from pathlib import Path
+import zipfile, rarfile
 
 sess = requests.Session()  # session to store cookies and remain logged in
 moodle_url = 'http://id.bits-hyderabad.ac.in/moodle/'
@@ -19,13 +21,12 @@ def login(user=None, pwd=None):
 	url = moodle_url + 'login/index.php'
 	payload = {'username': user, 'password': pwd, 'Submit': 'Login'}
 	r = sess.post(url, data=payload)
-	if(r.text.lower().find('invalid login') != -1):  # word only appears when login unsuccessful
+	if r.text.lower().find('invalid login') != -1:  # word only appears when login unsuccessful
 		print("Incorrect username/password.")
-	elif(r.text.lower().find('dashboard') != -1):  # word only appears when login is successful
+	elif r.text.lower().find('dashboard') != -1:  # word only appears when login is successful
 		print("Login successful!")
 	else:
 		print("Error")
-
 
 
 def get_attr(text, param, offset=0, end_ch='"'):
@@ -58,6 +59,7 @@ def get_all_courses():
 	with open('all_ids.txt', 'w') as f:  # store in file to avoid having to scrape everytime
 		f.writelines(ids)
 	print('Done.')
+	return ids
 
 
 def get_enrol_payload(c, c_id):
@@ -172,6 +174,31 @@ def get_course_links(c_id):
 	return course
 
 
+def extract_archive(archive_path):
+	"""Extract the archive to a folder"""
+	if file_path.suffix == '.zip':
+		archive = zipfile.ZipFile(str(archive_path), 'r')
+	elif archive_path.suffix == '.rar':
+		rarfile.UNRAR_TOOL = config['DEFAULT']['unrar_path']
+		archive = rarfile.RarFile(str(archive_path), 'r')
+
+	folder = archive_path.parent / archive_path.stem
+	if not folder.is_dir():
+		folder.mkdir()
+
+	archive.extractall(str(folder))
+	archive.close()
+	archive_path.unlink()  # delete the archive
+
+	contents = list(folder.iterdir())
+	if len(contents) == 1 and contents[0].is_dir():  # in case the archive only contained one folder
+		parent_fold = contents[0].parents[1]
+		temp_fold = parent_fold / 'temp'
+		contents[0].rename(temp_fold)
+		contents[0].parent.rmdir()
+		temp_fold.rename(parent_fold / contents[0].stem)
+
+
 def download_file(file, folder):
 	"""Where the actual downloading happens."""
 	file_url = file['url']
@@ -182,33 +209,37 @@ def download_file(file, folder):
 		print('Unable to access file. Check if you are logged in and enrolled.')
 		return
 	print(f"Downloading {file_name}.", end=' ')
-	file['real_name'] = file_name
-	file_path = os.path.join(folder, file_name)
-	if os.path.isfile(file_path):  # in case the file already exists
+	file['real_name'] = file_name  # this is the name by which file is saved
+	# file_path = os.path.join(folder, file_name)
+	file_path = folder / file_name
+	if file_path.exists():  # in case the file already exists
 		print('Already exists.')
 		return
-	# with open(file_path, 'wb') as f:
-	# 	shutil.copyfileobj(r.raw, f)
+	with open(str(file_path), 'wb') as f:
+		shutil.copyfileobj(r.raw, f)
+	if any([file_path.suffix == ext for ext in ['.zip', '.rar']]):
+		extract_archive(file_path)
 
 	print('Done.')
 
 
 def download_contents(contents, fold):
 	"""Download files of a course/folder."""
-	if not os.path.isdir(fold):
-		os.makedirs(fold)
+	if not fold.is_dir():
+		fold.mkdir()
 		print("Created", fold)
 
 	for content in contents:
 		if content['type'] == 'folder':
-			new_fold = os.path.join(fold, content['name'])
+			new_fold = fold / content['name']
 			download_contents(content['contents'], new_fold)  # Recursively traverse the folders in case of sub-directories.
 		elif content['type'] == 'file':
 			download_file(content, fold)
 
 
 def download():
-	root_fold = config['DEFAULT']['root']
+	"""Download the files for all courses."""
+	root_fold = Path().cwd() / config['DEFAULT']['root']
 	if not os.path.isfile('courses_db.json'):
 		print("courses_db.json doesn't exist. Run update_db.")
 		return
@@ -224,7 +255,7 @@ def download():
 			print(f"Already downloaded {course['name']}.")
 			continue
 		print(f"Getting contents of {course['name']}.")
-		fold = os.path.join(root_fold, course['name'])  # folder will be course name.
+		fold = root_fold / course['name']
 		download_contents(course['contents'], fold)
 		course['downloaded'] = True
 		if not course['remain enrolled']:
@@ -260,10 +291,11 @@ def update_db():
 			print('all_ids.txt is empty. Run get_all_courses once.')
 			return
 		ids = data.split('\n')
+	ids = ['1263']
 	db, ids = read_database(ids)
-
-	for c_id in ids[215:235]:
-		remain_enrolled = course_enrol(c_id)  #TODO: Break up enrolment into small groups.
+	print(ids)
+	for c_id in ids:  #TODO: Break up enrolment into small groups.
+		remain_enrolled = course_enrol(c_id)
 		if remain_enrolled is -1:  # in case enrollment was unsuccessful
 			continue
 		course_data = get_course_links(c_id)
@@ -274,6 +306,7 @@ def update_db():
 
 	with open('courses_db.json', 'w') as f:
 		f.write(json.dumps(db, indent=4))
+
 
 def main():
 	update_db()
