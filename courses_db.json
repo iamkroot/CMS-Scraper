@@ -1,0 +1,383 @@
+[
+    {
+        "name": "CHEM F111GENERAL CHEMISTRY TS8",
+        "type": "course",
+        "id": 702,
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "Conformation",
+                "type": "folder",
+                "id": 693,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "PS-1-conformation.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "PS-1-conformation.pdf"
+                    },
+                    {
+                        "name": "PS-2_conform_anal.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "PS-2_conform_anal.pdf"
+                    }
+                ]
+            },
+            {
+                "name": "Stereochemistry",
+                "type": "folder",
+                "id": 1357,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "PS-3_stereochemistry.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "PS-3_stereochemistry.pdf"
+                    },
+                    {
+                        "name": "PS-4-Stereochemistry.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "PS-4-Stereochemistry.pdf"
+                    }
+                ]
+            },
+            {
+                "name": "Substitution/Elimination Reactions",
+                "type": "folder",
+                "id": 2015,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "PS-5-SN.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "PS-5-SN.pdf"
+                    },
+                    {
+                        "name": "PS-6-SN-El.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "PS-6-SN-El.pdf"
+                    },
+                    {
+                        "name": "PS-7-El.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "PS-7-El.pdf"
+                    }
+                ]
+            },
+            {
+                "name": "Addition Rxn, Aromaticity etc.",
+                "type": "folder",
+                "id": 2741,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "notes_14D_EAS01.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "notes_14D_EAS01.pdf"
+                    },
+                    {
+                        "name": "PS-8-AdditionRxns.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "PS-8-AdditionRxns.pdf"
+                    },
+                    {
+                        "name": "PS-9-electrohilic-aromatic-subsRxns-ans.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "PS-9-electrohilic-aromatic-subsRxns-ans.pdf"
+                    },
+                    {
+                        "name": "PS-9-electrohilic-aromatic-subsRxns.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "PS-9-electrohilic-aromatic-subsRxns.pdf"
+                    }
+                ]
+            },
+            {
+                "name": "Hydrogen atom etc.",
+                "type": "folder",
+                "id": 4803,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "H-atom-problems.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "H-atom-problems.pdf"
+                    },
+                    {
+                        "name": "ProblemSheet-Hatom-additional 2.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "ProblemSheet-Hatom-additional 2.pdf"
+                    },
+                    {
+                        "name": "Table-10d1-Atkins.png",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "Table-10d1-Atkins.png"
+                    },
+                    {
+                        "name": "TS2-ProblemSheet-3.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "TS2-ProblemSheet-3.pdf"
+                    },
+                    {
+                        "name": "TS5-ProblemSheet-5-Hatom-ans.jpg",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "TS5-ProblemSheet-5-Hatom-ans.jpg"
+                    }
+                ]
+            },
+            {
+                "name": "Term Symbol",
+                "type": "folder",
+                "id": 5406,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "TS2-ProblemSheet-5-termsymbols.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "TS2-ProblemSheet-5-termsymbols.pdf"
+                    },
+                    {
+                        "name": "TS2-ProblemSheet-6-termsymbols.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "TS2-ProblemSheet-6-termsymbols.pdf"
+                    }
+                ]
+            },
+            {
+                "name": "Chemical Bonding",
+                "type": "folder",
+                "id": 5857,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "chemical-bonding.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "chemical-bonding.pdf"
+                    },
+                    {
+                        "name": "CO-MO.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "CO-MO.pdf"
+                    },
+                    {
+                        "name": "MO-problemsheet.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "MO-problemsheet.pdf"
+                    }
+                ]
+            },
+            {
+                "name": "NMR and IR",
+                "type": "folder",
+                "id": 6285,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "DBE.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "DBE.pdf"
+                    },
+                    {
+                        "name": "nmr-ir.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "nmr-ir.pdf"
+                    },
+                    {
+                        "name": "ProblemSheet-NMR.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "ProblemSheet-NMR.pdf"
+                    },
+                    {
+                        "name": "spectroscopy.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "spectroscopy.pdf"
+                    }
+                ]
+            },
+            {
+                "name": "Thermodynamics",
+                "type": "folder",
+                "id": 6824,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "Thermodynamics_QA_CHEM F111_200915a.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "Thermodynamics_QA_CHEM F111_200915a.pdf"
+                    },
+                    {
+                        "name": "TS2-ProblemSheet-thermody-2.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "TS2-ProblemSheet-thermody-2.pdf"
+                    }
+                ]
+            },
+            {
+                "name": "Chemical Kinetics",
+                "type": "folder",
+                "id": 6825,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "Deriving Rate Laws Using the Steady-State Approximation - part I.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "Deriving Rate Laws Using the Steady-State Approximation - part I.pdf"
+                    },
+                    {
+                        "name": "Deriving Rate Laws Using the Steady-State Approximation - part II.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "Deriving Rate Laws Using the Steady-State Approximation - part II.pdf"
+                    },
+                    {
+                        "name": "kinetics_1.pdf",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "kinetics_1.pdf"
+                    }
+                ]
+            },
+            {
+                "name": "Inorganic chemistry portion",
+                "type": "file",
+                "id": 3469,
+                "downloaded": true,
+                "real_name": "coordination-chem-problems.pdf"
+            },
+            {
+                "name": "Quantum Theory",
+                "type": "file",
+                "id": 3470,
+                "downloaded": true,
+                "real_name": "PS-11-Quantum_Theory.pdf"
+            }
+        ]
+    },
+    {
+        "name": "PHY F111MECH OSCILLATIONS & WAVE LS2",
+        "type": "course",
+        "id": 1263,
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": " [UPDATED] SOLUTIONS (PART A + PART B) COMPREHENSIVE EXAM",
+                "type": "folder",
+                "id": 7677,
+                "downloaded": true,
+                "contents": [
+                    {
+                        "name": "Solutions (Part A + Part B).rar",
+                        "type": "file",
+                        "downloaded": true,
+                        "real_name": "Solutions (Part A + Part B).rar"
+                    }
+                ]
+            },
+            {
+                "name": "HANDOUT FOR MEOW",
+                "type": "file",
+                "id": 358,
+                "downloaded": true,
+                "real_name": "PHY F111_Handout_Sem I_2017-18.docx"
+            },
+            {
+                "name": "Lecture 1_introduction",
+                "type": "file",
+                "id": 1441,
+                "downloaded": true,
+                "real_name": "lecture1_introduction.pdf"
+            },
+            {
+                "name": "Polar coordinates",
+                "type": "file",
+                "id": 1442,
+                "downloaded": true,
+                "real_name": "polar coordinates ppts.rar"
+            },
+            {
+                "name": "angular momentum",
+                "type": "file",
+                "id": 1443,
+                "downloaded": true,
+                "real_name": "angular momentum ppts.rar"
+            },
+            {
+                "name": "Rigid body motion",
+                "type": "file",
+                "id": 2397,
+                "downloaded": true,
+                "real_name": "regid body motion.rar"
+            },
+            {
+                "name": "Noninertial systems",
+                "type": "file",
+                "id": 2636,
+                "downloaded": true,
+                "real_name": "noninertial systems.rar"
+            },
+            {
+                "name": "central force motion",
+                "type": "file",
+                "id": 3719,
+                "downloaded": true,
+                "real_name": "central force motion ppts.rar"
+            },
+            {
+                "name": "QUIZ-1 (SOLUTIONS)",
+                "type": "file",
+                "id": 2541,
+                "downloaded": true,
+                "real_name": "QUIZ-1 (SOLUTIONS).zip"
+            },
+            {
+                "name": "MID-SEMESTER GRADING SHEET",
+                "type": "file",
+                "id": 5650,
+                "downloaded": true,
+                "real_name": "Midsem Grading-PHY F111 (MEOW)(2017-18 SEM-I).pdf"
+            },
+            {
+                "name": "QUIZ-2 [SOLUTIONS]",
+                "type": "file",
+                "id": 5867,
+                "downloaded": true,
+                "real_name": "quiz_2_Soln.rar"
+            },
+            {
+                "name": "PRE COMPRE MARKS [QUIZZES + MID SEM]",
+                "type": "file",
+                "id": 7230,
+                "downloaded": true,
+                "real_name": "PRE COMPRE MARKS - MEOW.pdf"
+            }
+        ]
+    }
+]
