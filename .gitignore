@@ -26,6 +26,9 @@
 *.sql
 *.sqlite
 *.pyc
+*.ini
+*.sublime-project
+*.sublime-workspace
 
 # OS generated files #
 ######################
