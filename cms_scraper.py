@@ -248,7 +248,6 @@ def update_db():
 	print("Updating database.")
 	ids = read_file('all_ids.txt', get_all_courses, lambda d: d.split('\n'))
 	db = read_file('courses_db.json', lambda: [], lambda d: json.loads(d))
-
 	for c_id in ids:  # TODO: Break up enrolment into small groups.
 		remain_enrolled = course_enrol(c_id)
 		if remain_enrolled is -1:  # in case enrollment was unsuccessful
@@ -261,7 +260,20 @@ def update_db():
 			f.write(json.dumps(db, indent=4))
 
 
-def extract_archive(archive_path):
+def traverse_fold(fold_path):
+	contents = []
+	for fpath in fold_path.iterdir():
+		content = {
+			"name": str(fpath.relative_to(fold_path)),
+			"type": fpath.is_file() and "file" or "folder"
+		}
+		if fpath.is_dir():
+			content['contents'] = traverse_fold(fpath)
+		contents.append(content)
+	return contents
+
+
+def extract_archive(file_data, archive_path):
 	"""Extract the archive to a folder."""
 	if archive_path.suffix == '.zip':
 		archive = zipfile.ZipFile(str(archive_path), 'r')
@@ -282,13 +294,16 @@ def extract_archive(archive_path):
 		temp_fold = parent_fold / 'temp'
 		contents[0].rename(temp_fold)
 		contents[0].parent.rmdir()
-		temp_fold.rename(parent_fold / contents[0].stem)
+		folder = parent_fold / contents[0].stem
+		temp_fold.rename(folder)
+	file_data['contents'] = traverse_fold(folder)
 
 
 def download_file(file, folder):
 	"""Where the actual downloading happens."""
 	if 'url' in file:  # for files inside folders
 		file_url = file['url']
+		del file['url']
 	else:  # for files directly inside course directory
 		file_url = moodle_url + "mod/resource/view.php?id=" + str(file['id'])
 
@@ -312,10 +327,7 @@ def download_file(file, folder):
 		print('Done.')
 
 	if any([file_path.suffix == ext for ext in ['.zip', '.rar']]):
-		extract_archive(file_path)
-
-	if 'url' in file:
-		del file['url']
+		extract_archive(file, file_path)
 
 
 def download_contents(contents, fold):
