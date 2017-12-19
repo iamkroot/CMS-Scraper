@@ -29,6 +29,7 @@
 *.ini
 *.sublime-project
 *.sublime-workspace
+*.bak
 
 # OS generated files #
 ######################

@@ -78,16 +78,15 @@ def login(user=None, pwd=None):
 def get_all_courses():
 	"""Scrape CMS and return list of IDS of courses."""
 	ids = []
-	url = moodle_url + 'course/index.php?categoryid=5&browse=courses&perpage=5'
+	url = moodle_url + 'course/index.php?categoryid=5&browse=courses'
 	print('Getting course IDS of all courses.', end=' ')
-	for i in range(0, 168):
-		r = sess.get(url, params={'page': str(i)})
-		soup = BeautifulSoup(r.text, 'html.parser')
-		courses = soup.find_all('div', {'class': 'coursename'})
-		for course in courses:
-			link = course.a['href']
-			c_id = get_attr(link, '=', 1)
-			ids.append(c_id + '\n')
+	r = sess.get(url, params={'perpage': '3000'})
+	soup = BeautifulSoup(r.text, 'html.parser')
+	courses = soup.find_all('div', {'class': 'coursename'})
+	for course in courses:
+		link = course.a['href']
+		c_id = get_attr(link, '=', 1)
+		ids.append(c_id + '\n')
 
 	with open('all_ids.txt', 'w') as f:  # store in file to avoid having to scrape everytime
 		f.writelines(ids)
@@ -112,31 +111,48 @@ def get_enrol_payload(c, c_id):
 	return payload
 
 
-def course_enrol(c_id):
+def get_teachers(c_id):
+	print('Fetching teacher names.')
+	course_unenrol(c_id, True)
+	course_url = moodle_url + 'course/view.php'
+	c = sess.get(course_url, params={'id': c_id})
+	soup = BeautifulSoup(c.text, 'html.parser')
+	tag = soup.find('ul', {'class': 'teachers'})
+	teachers = tag and [t.a.text[:-2] for t in tag.contents] or []
+	course_enrol(c_id, True)
+
+	return teachers
+
+
+def course_enrol(c_id, suppress=False):
 	"""Enrol into a course."""
 	c_url = moodle_url + 'course/view.php'
 	form_url = moodle_url + 'enrol/index.php'
 	c = sess.get(c_url, params={'id': c_id})
 	if c.text[77:84] == 'Course:':
-		print('Already enrolled to', c_id)
+		if not suppress:
+			print('Already enrolled to', c_id)
 		return 1
 	payload = get_enrol_payload(c, c_id)
 	code = sess.post(form_url, data=payload)
-	if code.text.lower().find('course:') is -1:
-		print('Enrollment unsuccessful for', c_id)
+	if code.text[77:84] != 'Course:':
+		if not suppress:
+			print('Enrollment unsuccessful for', c_id)
 		return -1
 	else:
-		print('Enrolled to', c_id)
+		if not suppress:
+			print('Enrolled to', c_id)
 		return 0
 
 
-def course_unenrol(c_id):
+def course_unenrol(c_id, suppress=False):
 	"""Unenrol from a course."""
 	print("Unenrolling from", c_id, end='. ')
 	course_url = moodle_url + 'course/view.php'
 	c = sess.get(course_url, params={'id': c_id})
 	if c.text[77:84] != 'Course:':
-		print('Not enrolled to', c_id)
+		if not suppress:
+			print('Not enrolled to', c_id)
 		return
 	enrolid = get_attr(c.text, 'enrolid', 8)
 	sesskey = get_attr(c.text, 'sesskey', 10)
@@ -147,7 +163,8 @@ def course_unenrol(c_id):
 		'sesskey': sesskey
 	}
 	sess.post(unenrol_url, data=payload)
-	print('Done.')
+	if not suppress:
+		print('Done.')
 
 
 def fold_contents(fold_url):
@@ -236,6 +253,7 @@ def read_course(c_id, db):
 		'name': '',
 		'type': 'course',
 		'id': int(c_id),
+		'teachers': get_teachers(c_id),
 		'remain enrolled': 0,
 		'contents': []
 	}
@@ -248,6 +266,7 @@ def update_db():
 	print("Updating database.")
 	ids = read_file('all_ids.txt', get_all_courses, lambda d: d.split('\n'))
 	db = read_file('courses_db.json', lambda: [], lambda d: json.loads(d))
+
 	for c_id in ids:  # TODO: Break up enrolment into small groups.
 		remain_enrolled = course_enrol(c_id)
 		if remain_enrolled is -1:  # in case enrollment was unsuccessful
@@ -261,6 +280,7 @@ def update_db():
 
 
 def traverse_fold(fold_path):
+	"""Traverse a folder recursively and return its contents in json form."""
 	contents = []
 	for fpath in fold_path.iterdir():
 		content = {
@@ -322,12 +342,12 @@ def download_file(file, folder):
 		print('Already exists.')
 		return
 
-	with open(str(file_path), 'wb') as f:
-		shutil.copyfileobj(r.raw, f)
-		print('Done.')
+	# with open(str(file_path), 'wb') as f:
+	# 	shutil.copyfileobj(r.raw, f)
+	# 	print('Done.')
 
-	if any([file_path.suffix == ext for ext in ['.zip', '.rar']]):
-		extract_archive(file, file_path)
+	# if any([file_path.suffix == ext for ext in ['.zip', '.rar']]):
+	# 	extract_archive(file, file_path)
 
 
 def download_contents(contents, fold):
@@ -370,4 +390,5 @@ config = get_config('config.ini')
 if __name__ == '__main__':
 	login()
 	# get_all_courses()  # required on first run
+	# get_teachers('690')
 	main()
