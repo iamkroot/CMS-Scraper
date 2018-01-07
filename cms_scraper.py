@@ -59,20 +59,17 @@ def make_fold(parent, name):
 	return folder
 
 
-def login(user=None, pwd=None):
-	"""Login to CMS."""
-	if not user:
-		user = config['CREDS']['username']
-		pwd = config['CREDS']['password']
+def login(username=None, password=None):
+	"""DEPRECATED! Login to CMS."""
 	url = moodle_url + 'login/index.php'
-	payload = {'username': user, 'password': pwd, 'Submit': 'Login'}
+	payload = {'username': username, 'password': password}
 	r = sess.post(url, data=payload)
-	if r.text.lower().find('invalid login') != -1:  # word only appears when login unsuccessful
+	if 'invalid login' in r.text.lower():  # word only appears when login unsuccessful
 		print("Incorrect username/password.")
-	elif r.text.lower().find('dashboard') != -1:  # word only appears when login is successful
+	elif 'dashboard' in r.text.lower():  # word only appears when login is successful
 		print("Login successful!")
 	else:
-		print("Error")
+		print("Login Error.")
 
 
 def get_all_courses():
@@ -109,19 +106,6 @@ def get_enrol_payload(c, c_id):
 		'submitbutton': 'Enrol me'
 	}
 	return payload
-
-
-def get_teachers(c_id):
-	print('Fetching teacher names.')
-	course_unenrol(c_id, True)
-	course_url = moodle_url + 'course/view.php'
-	c = sess.get(course_url, params={'id': c_id})
-	soup = BeautifulSoup(c.text, 'html.parser')
-	tag = soup.find('ul', {'class': 'teachers'})
-	teachers = tag and [t.a.text[:-2] for t in tag.contents] or []
-	course_enrol(c_id, True)
-
-	return teachers
 
 
 def course_enrol(c_id, suppress=False):
@@ -165,6 +149,20 @@ def course_unenrol(c_id, suppress=False):
 	sess.post(unenrol_url, data=payload)
 	if not suppress:
 		print('Done.')
+
+
+def get_teachers(c_id):
+	"""Get the names of teachers of a course."""
+	print('Fetching teacher names.')
+	course_unenrol(c_id, True)
+	course_url = moodle_url + 'course/view.php'
+	c = sess.get(course_url, params={'id': c_id})
+	soup = BeautifulSoup(c.text, 'html.parser')
+	tag = soup.find('ul', {'class': 'teachers'})
+	teachers = [t.a.text[:-2] for t in tag.contents] if tag else []
+	course_enrol(c_id, True)
+
+	return teachers
 
 
 def fold_contents(fold_url):
@@ -285,7 +283,7 @@ def traverse_fold(fold_path):
 	for fpath in fold_path.iterdir():
 		content = {
 			"name": str(fpath.relative_to(fold_path)),
-			"type": fpath.is_file() and "file" or "folder"
+			"type": "file" if fpath.is_file() else "folder"
 		}
 		if fpath.is_dir():
 			content['contents'] = traverse_fold(fpath)
@@ -298,7 +296,7 @@ def extract_archive(file_data, archive_path):
 	if archive_path.suffix == '.zip':
 		archive = zipfile.ZipFile(str(archive_path), 'r')
 	elif archive_path.suffix == '.rar':
-		rarfile.UNRAR_TOOL = config['DEFAULT']['unrar_path']
+		rarfile.UNRAR_TOOL = config['PATHS']['unrar_path']
 		archive = rarfile.RarFile(str(archive_path), 'r')
 
 	folder = make_fold(archive_path.parent, archive_path.stem)
@@ -342,18 +340,18 @@ def download_file(file, folder):
 		print('Already exists.')
 		return
 
-	# with open(str(file_path), 'wb') as f:
-	# 	shutil.copyfileobj(r.raw, f)
-	# 	print('Done.')
+	with open(str(file_path), 'wb') as f:
+		shutil.copyfileobj(r.raw, f)
+		print('Done.')
 
-	# if any([file_path.suffix == ext for ext in ['.zip', '.rar']]):
-	# 	extract_archive(file, file_path)
+	if any([file_path.suffix == ext for ext in ['.zip', '.rar']]):
+		extract_archive(file, file_path)
 
 
 def download_contents(contents, fold):
 	"""Download files of a course/folder."""
 	for content in contents:
-		if content['downloaded']:  # to avoid redownloading the file/folder
+		if content['downloaded']:
 			print(f"Already downloaded {content['name']}.")
 			continue
 		if content['type'] == 'folder':
@@ -361,13 +359,13 @@ def download_contents(contents, fold):
 			download_contents(content['contents'], new_fold)  # Recursively traverse the folders in case of sub-directories.
 		elif content['type'] == 'file':
 			download_file(content, fold)
-		content['downloaded'] = True
+		content['downloaded'] = True  # to avoid redownloading the file/folder
 
 
 def download():
 	"""Download the files for all courses."""
 	print('Downloading files.')
-	root_fold = make_fold(Path().cwd(), config['DEFAULT']['root'])
+	root_fold = make_fold(Path().cwd(), config['PATHS']['root'])
 	courses = read_file('courses_db.json', update_db, lambda d: json.loads(d))
 
 	for course in courses:
@@ -388,7 +386,7 @@ def main():
 config = get_config('config.ini')
 
 if __name__ == '__main__':
-	login()
+	login(**config['CREDS'])
 	# get_all_courses()  # required on first run
 	# get_teachers('690')
-	main()
+	# main()

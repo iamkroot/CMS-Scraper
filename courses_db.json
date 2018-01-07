@@ -1,240 +1,279 @@
 [
     {
-        "name": "PHY F111MECH OSCILLATIONS & WAVE LS2",
+        "name": "CS F111COMPUTER PROGRAMMING PS6",
         "type": "course",
-        "id": 1263,
+        "id": 733,
+        "teachers": [
+            "Barsha Mitra",
+            "Suvadip Batabyal"
+        ],
         "remain enrolled": 1,
         "contents": [
             {
-                "name": " [UPDATED] SOLUTIONS (PART A + PART B) COMPREHENSIVE EXAM",
-                "type": "folder",
-                "id": 7677,
+                "name": "Labsheet 1",
+                "type": "file",
+                "id": 341,
                 "downloaded": true,
-                "contents": [
-                    {
-                        "name": "Solutions (Part A + Part B).rar",
-                        "type": "file",
-                        "downloaded": true,
-                        "contents": [
-                            {
-                                "name": "Solution 1 Part B.pdf",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Solution 2  Part B.pdf",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Solution 3  Part B.pdf",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Solution 4  Part B.pdf",
-                                "type": "file"
-                            },
-                            {
-                                "name": "Solutions Part A.pdf",
-                                "type": "file"
-                            }
-                        ]
-                    }
-                ]
+                "real_name": "LabSheet1.pdf"
             },
             {
-                "name": "HANDOUT FOR MEOW",
+                "name": "Labsheet 2",
                 "type": "file",
-                "id": 358,
+                "id": 792,
                 "downloaded": true,
-                "real_name": "PHY F111_Handout_Sem I_2017-18.docx"
+                "real_name": "labsheet-2.pdf"
             },
             {
-                "name": "Lecture 1_introduction",
+                "name": "Lab Sheet 3",
                 "type": "file",
-                "id": 1441,
+                "id": 947,
                 "downloaded": true,
-                "real_name": "lecture1_introduction.pdf"
+                "real_name": "Lab Sheet 3.pdf"
             },
             {
-                "name": "Polar coordinates",
+                "name": "Lab sheet 4",
                 "type": "file",
-                "id": 1442,
+                "id": 1812,
                 "downloaded": true,
-                "contents": [
-                    {
-                        "name": "lecture2_polar coordinates.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture3_polar coordinates.pdf",
-                        "type": "file"
-                    }
-                ]
+                "real_name": "Lab sheet 4.pdf"
             },
             {
-                "name": "angular momentum",
+                "name": "Labsheet 5",
                 "type": "file",
-                "id": 1443,
+                "id": 1813,
                 "downloaded": true,
-                "contents": [
-                    {
-                        "name": "lecture4_angular momentum.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture5_angular momentum.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture6_angular momentum.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture7_angular momentum.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture8_angular momentum.pdf",
-                        "type": "file"
-                    }
-                ]
+                "real_name": "Labsheet 5.pdf"
             },
             {
-                "name": "Rigid body motion",
+                "name": "labsheet 6",
                 "type": "file",
-                "id": 2397,
+                "id": 2833,
                 "downloaded": true,
-                "contents": [
-                    {
-                        "name": "lecture10_rigid body motion.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture11_rigid body motion.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture12_rigid body motion.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture13_rigid body motion.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture14_rigid body motion.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture9_rigid body motion.pdf",
-                        "type": "file"
-                    }
-                ]
+                "real_name": "labsheet 6.pdf"
             },
             {
-                "name": "Noninertial systems",
+                "name": "Lab Sheet 7",
                 "type": "file",
-                "id": 2636,
+                "id": 2834,
                 "downloaded": true,
-                "contents": [
-                    {
-                        "name": "lecture15_Noninertial systems.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture16_Noninertial systems.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture17_Noninertial systems.pdf",
-                        "type": "file"
-                    }
-                ]
+                "real_name": "Lab Sheet 7.pdf"
             },
             {
-                "name": "central force motion",
+                "name": "Lab Sheet 8",
                 "type": "file",
-                "id": 3719,
+                "id": 3352,
                 "downloaded": true,
-                "contents": [
-                    {
-                        "name": "lecture18_central force motion.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture19_central force motion.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture20_central force motion.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "lecture21_central force motion.pdf",
-                        "type": "file"
-                    }
-                ]
+                "real_name": "Lab Sheet 8.pdf"
             },
             {
-                "name": "QUIZ-1 (SOLUTIONS)",
+                "name": "LabSheet 9",
                 "type": "file",
-                "id": 2541,
+                "id": 3758,
                 "downloaded": true,
-                "contents": [
-                    {
-                        "name": "V1-SOLN.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "V2-SOLN.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "V3-SOLN.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "V4-SOLN.pdf",
-                        "type": "file"
-                    }
-                ]
+                "real_name": "LabSheet 9.pdf"
             },
             {
-                "name": "MID-SEMESTER GRADING SHEET",
+                "name": "Lab Sheet 10",
                 "type": "file",
-                "id": 5650,
+                "id": 4285,
                 "downloaded": true,
-                "real_name": "Midsem Grading-PHY F111 (MEOW)(2017-18 SEM-I).pdf"
+                "real_name": "Lab Sheet 10.pdf"
             },
             {
-                "name": "QUIZ-2 [SOLUTIONS]",
+                "name": "Lab Sheet 11",
                 "type": "file",
-                "id": 5867,
+                "id": 4856,
                 "downloaded": true,
-                "contents": [
-                    {
-                        "name": "V1-Q2-S.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "V2-Q2-S.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "V3-Q2-S.pdf",
-                        "type": "file"
-                    },
-                    {
-                        "name": "V4-Q2-S.pdf",
-                        "type": "file"
-                    }
-                ]
+                "real_name": "Lab Sheet 11.pdf"
             },
             {
-                "name": "PRE COMPRE MARKS [QUIZZES + MID SEM]",
+                "name": "Lab sheet 12",
                 "type": "file",
-                "id": 7230,
+                "id": 5702,
                 "downloaded": true,
-                "real_name": "PRE COMPRE MARKS - MEOW.pdf"
+                "real_name": "Lab sheet 12.pdf"
+            },
+            {
+                "name": "Lab sheet 13",
+                "type": "file",
+                "id": 6261,
+                "downloaded": true,
+                "real_name": "Lab sheet 13.pdf"
+            }
+        ]
+    },
+    {
+        "name": "BIO F110 BIOLOGY LABORATORY PS7",
+        "type": "course",
+        "id": 491,
+        "teachers": [
+            "Gireesha Mohannath",
+            "Sankar Ganesh P"
+        ],
+        "remain enrolled": 1,
+        "contents": []
+    },
+    {
+        "name": "ECE F215DIGITAL DESIGN TS5",
+        "type": "course",
+        "id": 836,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": []
+    },
+    {
+        "name": "BIO F110 BIOLOGY LABORATORY PS8",
+        "type": "course",
+        "id": 492,
+        "teachers": [
+            "Sankar Ganesh P",
+            "VEERANNA KAMUNI"
+        ],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "hand out",
+                "type": "file",
+                "id": 2220,
+                "downloaded": true,
+                "real_name": "BIO F110 Handout.pdf"
+            },
+            {
+                "name": "1",
+                "type": "file",
+                "id": 2221,
+                "downloaded": true,
+                "real_name": "Experiment No. 1.pdf"
+            },
+            {
+                "name": "2",
+                "type": "file",
+                "id": 2222,
+                "downloaded": true,
+                "real_name": "Experiment 2.pdf"
+            },
+            {
+                "name": "3",
+                "type": "file",
+                "id": 2223,
+                "downloaded": true,
+                "real_name": "Experiment 3 - Plasmolysis.pdf"
+            },
+            {
+                "name": "4",
+                "type": "file",
+                "id": 2224,
+                "downloaded": true,
+                "real_name": "Experiment 4 - Mitosis.pdf"
+            },
+            {
+                "name": "5",
+                "type": "file",
+                "id": 2225,
+                "downloaded": true,
+                "real_name": "Experiment 5 - Blood Grouping.pdf"
+            },
+            {
+                "name": "Mid-Sem paper distribution",
+                "type": "file",
+                "id": 4183,
+                "downloaded": true,
+                "real_name": "Answer sheet distribution notice (1).pdf"
+            },
+            {
+                "name": "QP-MID SEM",
+                "type": "file",
+                "id": 4184,
+                "downloaded": true,
+                "real_name": "Mid Term QP.pdf"
+            },
+            {
+                "name": "Answer sheets-mid sem",
+                "type": "file",
+                "id": 4185,
+                "downloaded": true,
+                "real_name": "Mid Term AK.pdf"
+            },
+            {
+                "name": "experiment-6",
+                "type": "file",
+                "id": 4256,
+                "downloaded": true,
+                "real_name": "Experiment No 6.pdf"
+            },
+            {
+                "name": "experiment-7",
+                "type": "file",
+                "id": 4257,
+                "downloaded": true,
+                "real_name": "Experiment 7 - Glucose.pdf"
+            },
+            {
+                "name": "experiment-8",
+                "type": "file",
+                "id": 4258,
+                "downloaded": true,
+                "real_name": "Experiment 8 Cholesterol.pdf"
+            },
+            {
+                "name": "experiment 9",
+                "type": "file",
+                "id": 4763,
+                "downloaded": true,
+                "real_name": "DNA Extraction.pdf"
+            },
+            {
+                "name": "experiment 10",
+                "type": "file",
+                "id": 4292,
+                "downloaded": true,
+                "real_name": "Lab Manual BIO F110 04082017.pdf"
+            }
+        ]
+    },
+    {
+        "name": "IS F341SOFTWARE ENGINEERING PS1",
+        "type": "course",
+        "id": 1050,
+        "teachers": [
+            "SUBHRAKANTA PANDA"
+        ],
+        "remain enrolled": 0,
+        "contents": [
+            {
+                "name": "LAB Report Template",
+                "type": "file",
+                "id": 995,
+                "downloaded": true,
+                "real_name": "Lab.Report.Template.doc"
+            },
+            {
+                "name": "LAB_Assignments",
+                "type": "file",
+                "id": 2024,
+                "downloaded": true,
+                "real_name": "SoftwareEngineering_Assignments_v1.0.xlsx"
+            },
+            {
+                "name": "Lab Assignment to Groups",
+                "type": "file",
+                "id": 3510,
+                "downloaded": true,
+                "real_name": "SoftwareEngineering_Assignments_v1.2.xlsx"
+            },
+            {
+                "name": "Z-Specification Material",
+                "type": "file",
+                "id": 1748,
+                "downloaded": true,
+                "real_name": "11Z.pdf"
+            },
+            {
+                "name": "Petrinet Material",
+                "type": "file",
+                "id": 1749,
+                "downloaded": true,
+                "real_name": "CPN Presentation.pdf"
             }
         ]
     }
