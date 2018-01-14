@@ -59,25 +59,43 @@ def make_fold(parent, name):
 	return folder
 
 
-def login(username=None, password=None):
-	"""DEPRECATED! Login to CMS."""
+def google_login_page(src, field, value):
+	login_soup = BeautifulSoup(src.text, 'html.parser')
+	login_form = login_soup.find('form', id='gaia_loginform')
+	form_url = login_form['action']
+	payload = {}
+	for inp in login_form.find_all('input'):
+		try:
+			payload[inp['name']] = inp['value']
+		except KeyError:
+			pass
+	payload[field] = value
+	return sess.post(form_url, payload)
+
+
+def login_google(email=None, password=None):
 	url = moodle_url + 'login/index.php'
-	payload = {'username': username, 'password': password}
-	r = sess.post(url, data=payload)
-	if 'invalid login' in r.text.lower():  # word only appears when login unsuccessful
-		print("Incorrect username/password.")
-	elif 'dashboard' in r.text.lower():  # word only appears when login is successful
-		print("Login successful!")
-	else:
-		print("Login Error.")
+	r = sess.get(url)
+	soup = BeautifulSoup(r.text, 'html.parser')
+	auth_link = soup.find('div', {'class': 'potentialidp'}).a['href']
+	google_page = sess.get(auth_link)
+	google_email_filled = google_login_page(google_page, 'Email', email)
+	google_pwd = google_login_page(google_email_filled, 'Passwd', password)
+	if 'Dashboard' in google_pwd.text:
+		print('Login successful.')
+	elif 'Wrong password' in google_pwd.text:
+		print('Wrong password. Edit the config.ini file.')
+		exit(0)
 
 
 def get_all_courses():
 	"""Scrape CMS and return list of IDS of courses."""
-	ids = []
-	url = moodle_url + 'course/index.php?categoryid=5&browse=courses'
 	print('Getting course IDS of all courses.', end=' ')
-	r = sess.get(url, params={'perpage': '3000'})
+	ids = []
+	url = moodle_url + 'course/index.php'
+	resp = sess.get(url)
+	category_url = get_attr(resp.text, 'categoryname">', 23, '">')
+	r = sess.get(category_url, params={'perpage': '3000'})
 	soup = BeautifulSoup(r.text, 'html.parser')
 	courses = soup.find_all('div', {'class': 'coursename'})
 	for course in courses:
@@ -108,60 +126,51 @@ def get_enrol_payload(c, c_id):
 	return payload
 
 
-def course_enrol(c_id, suppress=False):
+def course_enrol(c_id, show_info=True):
 	"""Enrol into a course."""
 	c_url = moodle_url + 'course/view.php'
 	form_url = moodle_url + 'enrol/index.php'
 	c = sess.get(c_url, params={'id': c_id})
 	if c.text[77:84] == 'Course:':
-		if not suppress:
-			print('Already enrolled to', c_id)
+		print(f'Already enrolled to {c_id}' * show_info)
 		return 1
 	payload = get_enrol_payload(c, c_id)
 	code = sess.post(form_url, data=payload)
 	if code.text[77:84] != 'Course:':
-		if not suppress:
-			print('Enrollment unsuccessful for', c_id)
+		print(f'Enrollment unsuccessful for {c_id}' * show_info)
 		return -1
 	else:
-		if not suppress:
-			print('Enrolled to', c_id)
+		print(f'Enrolled to {c_id}' * show_info)
 		return 0
 
 
-def course_unenrol(c_id, suppress=False):
+def course_unenrol(c_id, show_info=True):
 	"""Unenrol from a course."""
-	print("Unenrolling from", c_id, end='. ')
+	print(f'Unenrolling from {c_id}.' * show_info, end=' ' if show_info else '\n')
 	course_url = moodle_url + 'course/view.php'
 	c = sess.get(course_url, params={'id': c_id})
 	if c.text[77:84] != 'Course:':
-		if not suppress:
-			print('Not enrolled to', c_id)
+		print(f'Not enrolled to {c_id}' * show_info)
 		return
 	enrolid = get_attr(c.text, 'enrolid', 8)
 	sesskey = get_attr(c.text, 'sesskey', 10)
 	unenrol_url = moodle_url + 'enrol/self/unenrolself.php'
-	payload = {
-		'enrolid': enrolid,
-		'confirm': '1',
-		'sesskey': sesskey
-	}
+	payload = {'enrolid': enrolid, 'confirm': '1', 'sesskey': sesskey}
 	sess.post(unenrol_url, data=payload)
-	if not suppress:
-		print('Done.')
+	print('Done.' * show_info)
 
 
 def get_teachers(c_id):
 	"""Get the names of teachers of a course."""
 	print('Fetching teacher names.')
-	course_unenrol(c_id, True)
+	course_unenrol(c_id, False)
 	course_url = moodle_url + 'course/view.php'
 	c = sess.get(course_url, params={'id': c_id})
 	soup = BeautifulSoup(c.text, 'html.parser')
 	tag = soup.find('ul', {'class': 'teachers'})
 	teachers = [t.a.text[:-2] for t in tag.contents] if tag else []
-	course_enrol(c_id, True)
-
+	course_enrol(c_id, False)
+	print(teachers)
 	return teachers
 
 
@@ -383,10 +392,10 @@ def main():
 	update_db()
 	download()
 
+
 config = get_config('config.ini')
 
 if __name__ == '__main__':
-	login(**config['CREDS'])
+	login_google(**config['CREDS'])
 	# get_all_courses()  # required on first run
-	# get_teachers('690')
-	# main()
+	main()
