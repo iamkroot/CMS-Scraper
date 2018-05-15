@@ -104,10 +104,25 @@ def get_all_courses():
     for course in courses:
         link = course.a['href']
         c_id = get_attr(link, '=', 1)
-        ids.append(c_id + '\n')
+        ids.append(c_id)
     # store in file to avoid having to scrape everytime
     with open('all_ids.txt', 'w') as f:
-        f.writelines(ids)
+        f.writelines([c_id + '\n' for c_id in ids])
+    print('Done.')
+    return ids
+
+
+def get_enrolled_courses():
+    """Get the course ids of all the courses that student is enrolled in."""
+    print('Getting course IDS of all courses you are enrolled in.', end=' ')
+    ids = []
+    url = moodle_url + 'my'
+    resp = sess.get(url)
+    soup = BeautifulSoup(resp.text, 'html.parser')
+    course_list = soup.find('aside', {'data-block': 'course_list'})
+    for course in course_list.find_all('li'):
+        c_id = get_attr(course.find('a')['href'], '=', 1)
+        ids.append(c_id)
     print('Done.')
     return ids
 
@@ -130,18 +145,18 @@ def course_enrol(c_id, show_info=True):
 
 def course_unenrol(c_id, show_info=True):
     """Unenrol from a course."""
-    print(f'Unenrolling from {c_id}.' * show_info, end=(' ', '\n')[show_info])
+    print(f'Unenrolling from {c_id}.' * show_info, end=('', ' ')[show_info])
     course_url = moodle_url + 'course/view.php'
     c = sess.get(course_url, params={'id': c_id})
     if c.text[77:84] != 'Course:':
-        print(f'Not enrolled to {c_id}.' * show_info)
+        print(f'Not enrolled to {c_id}' * show_info, end=('', '\n')[show_info])
         return
     enrolid = get_attr(c.text, 'enrolid', 8)
     sesskey = get_attr(c.text, 'sesskey', 10)
     unenrol_url = moodle_url + 'enrol/self/unenrolself.php'
     payload = {'enrolid': enrolid, 'confirm': '1', 'sesskey': sesskey}
     sess.post(unenrol_url, data=payload)
-    print('Done.' * show_info)
+    print('Done.' * show_info, end=('', '\n')[show_info])
 
 
 def get_teachers(c_id):
@@ -258,7 +273,7 @@ def update_db():
     """Get links for courses and update the courses_db."""
     print("Updating database.")
     # ids = read_file('all_ids.txt', get_all_courses, lambda d: d.split('\n'))
-    ids = ['768', '773']
+    ids = get_enrolled_courses()  # use this to limit the scraping
     db = read_file('courses_db.json', lambda: [], lambda d: json.loads(d))
 
     for c_id in ids:  # TODO: Break up enrolment into small groups.
@@ -387,5 +402,5 @@ config = get_config('config.ini')
 
 if __name__ == '__main__':
     login_google(**config['CREDS'])
-    # get_all_courses()  # required on first run
+    # get_all_courses()  # required on first run to be able to scrape full CMS
     main()

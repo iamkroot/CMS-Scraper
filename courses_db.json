@@ -525,5 +525,1311 @@
                 "real_name": "Lab sheet 13.pdf"
             }
         ]
+    },
+    {
+        "name": "BIO F110 BIOLOGY LABORATORY P1",
+        "type": "course",
+        "id": 530,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "BIO F110 HO",
+                "type": "file",
+                "id": 1499,
+                "downloaded": false
+            },
+            {
+                "name": "BIO F110 Mid-Sem Exam Notice",
+                "type": "file",
+                "id": 3660,
+                "downloaded": false
+            },
+            {
+                "name": "BIO F110 Compre paper distribution",
+                "type": "file",
+                "id": 6585,
+                "downloaded": false
+            },
+            {
+                "name": "Bio Lab Mid Sem-Set B 2018-AK",
+                "type": "file",
+                "id": 3946,
+                "downloaded": false
+            },
+            {
+                "name": "Bio Lab Mid Sem-Set A  2018-AK",
+                "type": "file",
+                "id": 3947,
+                "downloaded": false
+            },
+            {
+                "name": "Bio F110 end sem quiz-SetB-AK",
+                "type": "file",
+                "id": 6344,
+                "downloaded": false
+            },
+            {
+                "name": "Bio F110 end sem quiz-SetA-AK",
+                "type": "file",
+                "id": 6345,
+                "downloaded": false
+            },
+            {
+                "name": "BIO-LAB Mid-Sem Grades ",
+                "type": "file",
+                "id": 4732,
+                "downloaded": false
+            },
+            {
+                "name": "BIO F110 ( BIO lab) marks-2nd sem 17-18-REVISED pre-comp total",
+                "type": "file",
+                "id": 6567,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "BIO F110 BIOLOGY LABORATORY P6",
+        "type": "course",
+        "id": 537,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "BIO F110 HO",
+                "type": "file",
+                "id": 1503,
+                "downloaded": false
+            },
+            {
+                "name": "BIO F110 Mid-Sem Exam Notice",
+                "type": "file",
+                "id": 3665,
+                "downloaded": false
+            },
+            {
+                "name": "BIO F110 Compre paper distribution",
+                "type": "file",
+                "id": 6590,
+                "downloaded": false
+            },
+            {
+                "name": "Bio Lab Mid Sem-Set B 2018-AK",
+                "type": "file",
+                "id": 3956,
+                "downloaded": false
+            },
+            {
+                "name": "Bio Lab Mid Sem-Set A  2018-AK",
+                "type": "file",
+                "id": 3957,
+                "downloaded": false
+            },
+            {
+                "name": "Bio F110 end sem quiz-SetB-AK",
+                "type": "file",
+                "id": 6354,
+                "downloaded": false
+            },
+            {
+                "name": "Bio F110 end sem quiz-SetA-AK",
+                "type": "file",
+                "id": 6355,
+                "downloaded": false
+            },
+            {
+                "name": "BIO F110-Bio Lab-Midsem Grading",
+                "type": "file",
+                "id": 4759,
+                "downloaded": false
+            },
+            {
+                "name": "BIO F110 ( BIO lab) marks-2nd sem 17-18-REVISED pre-comp total",
+                "type": "file",
+                "id": 6572,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "BIO F111 GENERAL BIOLOGY L1",
+        "type": "course",
+        "id": 541,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "SQuiz 1 Answer Key Set A Set B Set C Merged",
+                "type": "file",
+                "id": 2103,
+                "downloaded": false
+            },
+            {
+                "name": "SQ2 Solutions A, B C Sets",
+                "type": "file",
+                "id": 2678,
+                "downloaded": false
+            },
+            {
+                "name": "Surprise Quiz 3 Solutions",
+                "type": "file",
+                "id": 3308,
+                "downloaded": false
+            },
+            {
+                "name": "MID-SEM Syllabus",
+                "type": "file",
+                "id": 3843,
+                "downloaded": false
+            },
+            {
+                "name": "MIDSEM ANSWER KEY",
+                "type": "file",
+                "id": 4093,
+                "downloaded": false
+            },
+            {
+                "name": "Surprise Quiz 4 ANSWER KEY",
+                "type": "file",
+                "id": 4504,
+                "downloaded": false
+            },
+            {
+                "name": "MIDSEMESTER GRADING",
+                "type": "file",
+                "id": 4865,
+                "downloaded": false
+            },
+            {
+                "name": "Problems (set) from Patterns of Inheritance ",
+                "type": "file",
+                "id": 4877,
+                "downloaded": false
+            },
+            {
+                "name": "SQ5 ANSWER KEY",
+                "type": "file",
+                "id": 5163,
+                "downloaded": false
+            },
+            {
+                "name": "QUIZ 6 ANSWER KEY",
+                "type": "file",
+                "id": 5577,
+                "downloaded": false
+            },
+            {
+                "name": "Quiz 7 ANSWER KEY",
+                "type": "file",
+                "id": 5781,
+                "downloaded": false
+            },
+            {
+                "name": "Pre-compre Marks",
+                "type": "file",
+                "id": 6341,
+                "downloaded": false
+            },
+            {
+                "name": "Compre Exam Answer Key (Closed (set A & Set B) and Open Book) ",
+                "type": "file",
+                "id": 6878,
+                "downloaded": false
+            },
+            {
+                "name": "Updated Precompre Marks",
+                "type": "file",
+                "id": 6975,
+                "downloaded": false
+            },
+            {
+                "name": "Compre Closed Book ANSWER KEY update ",
+                "type": "file",
+                "id": 6999,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "BIO F111 GENERAL BIOLOGY L2",
+        "type": "course",
+        "id": 542,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "SQuiz 1 Answer Key Set A Set B Set C Merged",
+                "type": "file",
+                "id": 2104,
+                "downloaded": false
+            },
+            {
+                "name": "Distributionof Surprise Quiz papers and Rechecks",
+                "type": "file",
+                "id": 2208,
+                "downloaded": false
+            },
+            {
+                "name": "SQ Solutions Sets A B C",
+                "type": "file",
+                "id": 2679,
+                "downloaded": false
+            },
+            {
+                "name": "Surprise Quiz 3 Solutions",
+                "type": "file",
+                "id": 3309,
+                "downloaded": false
+            },
+            {
+                "name": "MID-SEM Syllabus",
+                "type": "file",
+                "id": 3842,
+                "downloaded": false
+            },
+            {
+                "name": "MIDSEM ANSWER KEY",
+                "type": "file",
+                "id": 4094,
+                "downloaded": false
+            },
+            {
+                "name": "Surprise Quiz 4 ANSWER KEY",
+                "type": "file",
+                "id": 4505,
+                "downloaded": false
+            },
+            {
+                "name": "MIDSEMESTER GRADING",
+                "type": "file",
+                "id": 4866,
+                "downloaded": false
+            },
+            {
+                "name": "Problems (set) from Patterns of Inheritance ",
+                "type": "file",
+                "id": 4878,
+                "downloaded": false
+            },
+            {
+                "name": "SQ5 ANSWER KEY",
+                "type": "file",
+                "id": 5164,
+                "downloaded": false
+            },
+            {
+                "name": "QUIZ 6 ANSWER KEY",
+                "type": "file",
+                "id": 5578,
+                "downloaded": false
+            },
+            {
+                "name": "QUIZ 7 Answer Key",
+                "type": "file",
+                "id": 5782,
+                "downloaded": false
+            },
+            {
+                "name": "Pre-compre Marks",
+                "type": "file",
+                "id": 6342,
+                "downloaded": false
+            },
+            {
+                "name": "Compre Answer Key Closed Book (Set A & Set B) & Open Book",
+                "type": "file",
+                "id": 6879,
+                "downloaded": false
+            },
+            {
+                "name": "Updated Precompre Marks",
+                "type": "file",
+                "id": 6980,
+                "downloaded": false
+            },
+            {
+                "name": "Compre Closed Book ASNWER KEY update",
+                "type": "file",
+                "id": 7000,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "BIO F111 GENERAL BIOLOGY T2",
+        "type": "course",
+        "id": 544,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": []
+    },
+    {
+        "name": "BITS F110 ENGINEERING GRAPHICS L2",
+        "type": "course",
+        "id": 587,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "Schedule_midsem",
+                "type": "file",
+                "id": 3686,
+                "downloaded": false
+            },
+            {
+                "name": "Batchwise_students_MIDTEST",
+                "type": "file",
+                "id": 3688,
+                "downloaded": false
+            },
+            {
+                "name": "Tut_class_March22nd",
+                "type": "file",
+                "id": 4624,
+                "downloaded": false
+            },
+            {
+                "name": "Mid_marks",
+                "type": "file",
+                "id": 4790,
+                "downloaded": false
+            },
+            {
+                "name": "MID_solution",
+                "type": "file",
+                "id": 4791,
+                "downloaded": false
+            },
+            {
+                "name": "Mid_template_passwords",
+                "type": "file",
+                "id": 4792,
+                "downloaded": false
+            },
+            {
+                "name": "MID_recheck format",
+                "type": "file",
+                "id": 4793,
+                "downloaded": false
+            },
+            {
+                "name": "Mid grade details",
+                "type": "file",
+                "id": 5293,
+                "downloaded": false
+            },
+            {
+                "name": "Mid marks",
+                "type": "file",
+                "id": 5294,
+                "downloaded": false
+            },
+            {
+                "name": "Make up Lab notice",
+                "type": "file",
+                "id": 5823,
+                "downloaded": false
+            },
+            {
+                "name": "Make up Lab list",
+                "type": "file",
+                "id": 6131,
+                "downloaded": false
+            },
+            {
+                "name": "Cancellation_tut_26thApril",
+                "type": "file",
+                "id": 6176,
+                "downloaded": false
+            },
+            {
+                "name": "Compre_schedule",
+                "type": "file",
+                "id": 6493,
+                "downloaded": false
+            },
+            {
+                "name": "Compre_detailed_list",
+                "type": "file",
+                "id": 6494,
+                "downloaded": false
+            },
+            {
+                "name": "Updated_precompre list",
+                "type": "file",
+                "id": 6979,
+                "downloaded": false
+            },
+            {
+                "name": "Labinstructions",
+                "type": "file",
+                "id": 1565,
+                "downloaded": false
+            },
+            {
+                "name": "Lecture-1 Orthographic projections",
+                "type": "file",
+                "id": 1566,
+                "downloaded": false
+            },
+            {
+                "name": "Projection_of _straightlines",
+                "type": "file",
+                "id": 2254,
+                "downloaded": false
+            },
+            {
+                "name": "Traces of line",
+                "type": "file",
+                "id": 2866,
+                "downloaded": false
+            },
+            {
+                "name": "Projection of planes",
+                "type": "file",
+                "id": 3133,
+                "downloaded": false
+            },
+            {
+                "name": "Projection of solids",
+                "type": "file",
+                "id": 3670,
+                "downloaded": false
+            },
+            {
+                "name": "midsem_instructions",
+                "type": "file",
+                "id": 3671,
+                "downloaded": false
+            },
+            {
+                "name": "Section of solids",
+                "type": "file",
+                "id": 4351,
+                "downloaded": false
+            },
+            {
+                "name": "Dev.surfaces",
+                "type": "file",
+                "id": 4962,
+                "downloaded": false
+            },
+            {
+                "name": "Isometric projection",
+                "type": "file",
+                "id": 5611,
+                "downloaded": false
+            },
+            {
+                "name": "Ortho-1_Schedule",
+                "type": "file",
+                "id": 1951,
+                "downloaded": false
+            },
+            {
+                "name": "Ortho-2_schedule",
+                "type": "file",
+                "id": 2300,
+                "downloaded": false
+            },
+            {
+                "name": "Line1_schedule",
+                "type": "file",
+                "id": 2608,
+                "downloaded": false
+            },
+            {
+                "name": "Traces_schedule",
+                "type": "file",
+                "id": 2876,
+                "downloaded": false
+            },
+            {
+                "name": "Projection of Planes_Schedule",
+                "type": "file",
+                "id": 3188,
+                "downloaded": false
+            },
+            {
+                "name": "Prj_solid_schedule",
+                "type": "file",
+                "id": 4160,
+                "downloaded": false
+            },
+            {
+                "name": "Section of solids schedule",
+                "type": "file",
+                "id": 4302,
+                "downloaded": false
+            },
+            {
+                "name": "Dev-sur_schedule",
+                "type": "file",
+                "id": 4963,
+                "downloaded": false
+            },
+            {
+                "name": "Evaluativelab_dev.sur",
+                "type": "file",
+                "id": 5209,
+                "downloaded": false
+            },
+            {
+                "name": "Practice lab_iso-1",
+                "type": "file",
+                "id": 5520,
+                "downloaded": false
+            },
+            {
+                "name": "ISO-2 schedule ",
+                "type": "file",
+                "id": 5809,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "BITS F110 ENGINEERING GRAPHICS P3",
+        "type": "course",
+        "id": 590,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "Marks_Ortho1",
+                "type": "file",
+                "id": 2307,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "BITS F110 ENGINEERING GRAPHICS T5",
+        "type": "course",
+        "id": 600,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": []
+    },
+    {
+        "name": "BITS F111 THERMODYNAMICS L1",
+        "type": "course",
+        "id": 605,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "Chapter-1-Introduction-2018",
+                "type": "file",
+                "id": 1422,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter-2-Control Volume and Units-2018",
+                "type": "file",
+                "id": 1554,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter-3-Pure Substance Behaviour-2018",
+                "type": "file",
+                "id": 1955,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter-4-Energy Transfers-2018",
+                "type": "file",
+                "id": 3839,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter-5-The First Law of Thermodynamics-2018",
+                "type": "file",
+                "id": 3840,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter-6-First Law Analysis for a Control Volume-2018",
+                "type": "file",
+                "id": 3841,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter-7-The Second Law of Thermodynamics-2018",
+                "type": "file",
+                "id": 4522,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter-8-Entropy for a Control Mass-2018",
+                "type": "file",
+                "id": 5321,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter-9-Entropy Equation for a Control Volume-2018",
+                "type": "file",
+                "id": 5655,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter-10-Availability-2018",
+                "type": "file",
+                "id": 6095,
+                "downloaded": false
+            },
+            {
+                "name": "Precompre marks ",
+                "type": "file",
+                "id": 6392,
+                "downloaded": false
+            },
+            {
+                "name": "compre answers",
+                "type": "file",
+                "id": 6893,
+                "downloaded": false
+            },
+            {
+                "name": "Compre question paper",
+                "type": "file",
+                "id": 6894,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "BITS F111 THERMODYNAMICS L2",
+        "type": "course",
+        "id": 606,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "Introduction",
+                "type": "file",
+                "id": 4041,
+                "downloaded": false
+            },
+            {
+                "name": "Some concept and definitions",
+                "type": "file",
+                "id": 4042,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter 3",
+                "type": "file",
+                "id": 4043,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter 4",
+                "type": "file",
+                "id": 4044,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter 5",
+                "type": "file",
+                "id": 4045,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter 6",
+                "type": "file",
+                "id": 4046,
+                "downloaded": false
+            },
+            {
+                "name": "chapter 7",
+                "type": "file",
+                "id": 5454,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter 8",
+                "type": "file",
+                "id": 5456,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter 9",
+                "type": "file",
+                "id": 5949,
+                "downloaded": false
+            },
+            {
+                "name": "Chapter 10",
+                "type": "file",
+                "id": 6784,
+                "downloaded": false
+            },
+            {
+                "name": "Precompre marks ",
+                "type": "file",
+                "id": 6393,
+                "downloaded": false
+            },
+            {
+                "name": "Compre solutions",
+                "type": "file",
+                "id": 6898,
+                "downloaded": false
+            },
+            {
+                "name": "Compre question paper",
+                "type": "file",
+                "id": 6899,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "BITS F111 THERMODYNAMICS T6",
+        "type": "course",
+        "id": 612,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": []
+    },
+    {
+        "name": "BITS F112 TECHNICAL REPORT WRITING L1",
+        "type": "course",
+        "id": 616,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "Course Handout",
+                "type": "file",
+                "id": 3007,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "CS F111 COMPUTER PROGRAMMING L2",
+        "type": "course",
+        "id": 769,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "Introduction to Computers ",
+                "type": "file",
+                "id": 2217,
+                "downloaded": false
+            },
+            {
+                "name": "Introduction to Flowcharts and Algorithms",
+                "type": "file",
+                "id": 2218,
+                "downloaded": false
+            },
+            {
+                "name": "Binary System",
+                "type": "file",
+                "id": 2219,
+                "downloaded": false
+            },
+            {
+                "name": "Introduction to C",
+                "type": "file",
+                "id": 2220,
+                "downloaded": false
+            },
+            {
+                "name": "Conditionals",
+                "type": "file",
+                "id": 3640,
+                "downloaded": false
+            },
+            {
+                "name": "Loop Constructs",
+                "type": "file",
+                "id": 3641,
+                "downloaded": false
+            },
+            {
+                "name": "Functions",
+                "type": "file",
+                "id": 3642,
+                "downloaded": false
+            },
+            {
+                "name": "pointers",
+                "type": "file",
+                "id": 3643,
+                "downloaded": false
+            },
+            {
+                "name": "1D arrays",
+                "type": "file",
+                "id": 3644,
+                "downloaded": false
+            },
+            {
+                "name": "Strings",
+                "type": "file",
+                "id": 3986,
+                "downloaded": false
+            },
+            {
+                "name": "Storage Class",
+                "type": "file",
+                "id": 5302,
+                "downloaded": false
+            },
+            {
+                "name": "Searching and Sorting",
+                "type": "file",
+                "id": 5303,
+                "downloaded": false
+            },
+            {
+                "name": "Dynamic Memory Allocation",
+                "type": "file",
+                "id": 5304,
+                "downloaded": false
+            },
+            {
+                "name": "User Defined Data Types",
+                "type": "file",
+                "id": 5305,
+                "downloaded": false
+            },
+            {
+                "name": "Problem ",
+                "type": "file",
+                "id": 5613,
+                "downloaded": false
+            },
+            {
+                "name": "Problems",
+                "type": "file",
+                "id": 5614,
+                "downloaded": false
+            },
+            {
+                "name": "Linked List ",
+                "type": "file",
+                "id": 5817,
+                "downloaded": false
+            },
+            {
+                "name": "Problems on Linked List",
+                "type": "file",
+                "id": 5818,
+                "downloaded": false
+            },
+            {
+                "name": "Problems on Linked List",
+                "type": "file",
+                "id": 5819,
+                "downloaded": false
+            },
+            {
+                "name": "Problems on Linked List",
+                "type": "file",
+                "id": 5821,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "MATH F112 MATHEMATICS II L1",
+        "type": "course",
+        "id": 1080,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "MATH F 112 ASSIGNMENT-1",
+                "type": "file",
+                "id": 3431,
+                "downloaded": false
+            },
+            {
+                "name": "MATH F 112 ASSIGNMENT-1  CORRECTION",
+                "type": "file",
+                "id": 3471,
+                "downloaded": false
+            },
+            {
+                "name": "DATE OF SUBMISSION",
+                "type": "file",
+                "id": 3498,
+                "downloaded": false
+            },
+            {
+                "name": "PORTION FOR MID SEM MATHS F 112",
+                "type": "file",
+                "id": 3989,
+                "downloaded": false
+            },
+            {
+                "name": "Math F 112 Mathematics-ll paper distribution",
+                "type": "file",
+                "id": 4575,
+                "downloaded": false
+            },
+            {
+                "name": "Solution Math F 112",
+                "type": "file",
+                "id": 4595,
+                "downloaded": false
+            },
+            {
+                "name": "Solution",
+                "type": "file",
+                "id": 4596,
+                "downloaded": false
+            },
+            {
+                "name": "Solution Q4 and Q5",
+                "type": "file",
+                "id": 4597,
+                "downloaded": false
+            },
+            {
+                "name": "Solution Q6",
+                "type": "file",
+                "id": 4598,
+                "downloaded": false
+            },
+            {
+                "name": "Solution Q6-b",
+                "type": "file",
+                "id": 4599,
+                "downloaded": false
+            },
+            {
+                "name": "Redistribution of Math F112 Mid Sem answer books",
+                "type": "file",
+                "id": 4847,
+                "downloaded": false
+            },
+            {
+                "name": "RECHECK PAPER DISTRIBUTION MATH F 112",
+                "type": "file",
+                "id": 5051,
+                "downloaded": false
+            },
+            {
+                "name": "MATH F112- MARKS AFTER RECHECK",
+                "type": "file",
+                "id": 5081,
+                "downloaded": false
+            },
+            {
+                "name": "Mid-sem grades Math F112",
+                "type": "file",
+                "id": 5351,
+                "downloaded": false
+            },
+            {
+                "name": "Makeup Notice of Math F 112",
+                "type": "file",
+                "id": 5426,
+                "downloaded": false
+            },
+            {
+                "name": "Math F112 Assignment-2",
+                "type": "file",
+                "id": 5642,
+                "downloaded": false
+            },
+            {
+                "name": "Portion for Compre",
+                "type": "file",
+                "id": 6509,
+                "downloaded": false
+            },
+            {
+                "name": "Pre-Compre Math F112",
+                "type": "file",
+                "id": 6604,
+                "downloaded": false
+            },
+            {
+                "name": "Compre paper distribution",
+                "type": "file",
+                "id": 6923,
+                "downloaded": false
+            },
+            {
+                "name": "Id wise paper Distribution table",
+                "type": "file",
+                "id": 6933,
+                "downloaded": false
+            },
+            {
+                "name": "Recheck Paper distribution",
+                "type": "file",
+                "id": 6960,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "MATH F112 MATHEMATICS II L2",
+        "type": "course",
+        "id": 1081,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "MATH F 112 ASSIGNMENT-1",
+                "type": "file",
+                "id": 3432,
+                "downloaded": false
+            },
+            {
+                "name": "MATH F 112 ASSIGNMENT-1",
+                "type": "file",
+                "id": 3472,
+                "downloaded": false
+            },
+            {
+                "name": "DATE OF SUBMISSION",
+                "type": "file",
+                "id": 3497,
+                "downloaded": false
+            },
+            {
+                "name": "PORTION FOR MATH F 112",
+                "type": "file",
+                "id": 3990,
+                "downloaded": false
+            },
+            {
+                "name": "Math F 112 paper distribution notice",
+                "type": "file",
+                "id": 4576,
+                "downloaded": false
+            },
+            {
+                "name": "Solution Q1 and Q2",
+                "type": "file",
+                "id": 4600,
+                "downloaded": false
+            },
+            {
+                "name": "Solution Q3",
+                "type": "file",
+                "id": 4601,
+                "downloaded": false
+            },
+            {
+                "name": "Solution Q4 and Q5",
+                "type": "file",
+                "id": 4602,
+                "downloaded": false
+            },
+            {
+                "name": "Solution Q6-a",
+                "type": "file",
+                "id": 4603,
+                "downloaded": false
+            },
+            {
+                "name": "Solution Q6-b",
+                "type": "file",
+                "id": 4604,
+                "downloaded": false
+            },
+            {
+                "name": "Redistribution of Math F112 answer Books",
+                "type": "file",
+                "id": 4849,
+                "downloaded": false
+            },
+            {
+                "name": "MATH F 112 RECHECK DISTRIBUTION",
+                "type": "file",
+                "id": 5052,
+                "downloaded": false
+            },
+            {
+                "name": "MATH F 112 MARKS AFTER RECHECK",
+                "type": "file",
+                "id": 5082,
+                "downloaded": false
+            },
+            {
+                "name": "Mid-Sem Grades of Math F112",
+                "type": "file",
+                "id": 5354,
+                "downloaded": false
+            },
+            {
+                "name": "Makeup Notice of Math F112",
+                "type": "file",
+                "id": 5427,
+                "downloaded": false
+            },
+            {
+                "name": "Math F112 Assignment-2",
+                "type": "file",
+                "id": 5643,
+                "downloaded": false
+            },
+            {
+                "name": "Portion forCompre",
+                "type": "file",
+                "id": 6510,
+                "downloaded": false
+            },
+            {
+                "name": "Pre Compre Math F112",
+                "type": "file",
+                "id": 6605,
+                "downloaded": false
+            },
+            {
+                "name": "Compre paper distribution",
+                "type": "file",
+                "id": 6924,
+                "downloaded": false
+            },
+            {
+                "name": "id wise paper distribution table",
+                "type": "file",
+                "id": 6934,
+                "downloaded": false
+            },
+            {
+                "name": "Recheck paper distribution",
+                "type": "file",
+                "id": 6961,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "MATH F112 MATHEMATICS II T7",
+        "type": "course",
+        "id": 1100,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": []
+    },
+    {
+        "name": "MATH F113 PROBABILITY & STATISTICS L1",
+        "type": "course",
+        "id": 1103,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "Announcement of Mid-semester Test",
+                "type": "file",
+                "id": 3558,
+                "downloaded": false
+            },
+            {
+                "name": "Mid-semester(Solution)",
+                "type": "file",
+                "id": 4051,
+                "downloaded": false
+            },
+            {
+                "name": "Distribution of Mid-semester answer sheet",
+                "type": "file",
+                "id": 4179,
+                "downloaded": false
+            },
+            {
+                "name": "Marks upto Mid-semester Test",
+                "type": "file",
+                "id": 4645,
+                "downloaded": false
+            },
+            {
+                "name": "Tutorial Test II (Solution)",
+                "type": "file",
+                "id": 5109,
+                "downloaded": false
+            },
+            {
+                "name": "Precompre Marks",
+                "type": "file",
+                "id": 6096,
+                "downloaded": false
+            },
+            {
+                "name": "Part- A Answer",
+                "type": "file",
+                "id": 6794,
+                "downloaded": false
+            },
+            {
+                "name": "Comprehensive Keys (Part-B)",
+                "type": "file",
+                "id": 6817,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "MATH F113 PROBABILITY & STATISTICS L3",
+        "type": "course",
+        "id": 1105,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": [
+            {
+                "name": "Mid-semester(Solution)",
+                "type": "file",
+                "id": 4053,
+                "downloaded": false
+            },
+            {
+                "name": "Distribution of Mid-semester answer sheet",
+                "type": "file",
+                "id": 4181,
+                "downloaded": false
+            },
+            {
+                "name": "Marks upto Mid-semester Test",
+                "type": "file",
+                "id": 4647,
+                "downloaded": false
+            },
+            {
+                "name": "Tutorial Test II (Solution)",
+                "type": "file",
+                "id": 5111,
+                "downloaded": false
+            },
+            {
+                "name": "Precompre Marks",
+                "type": "file",
+                "id": 6100,
+                "downloaded": false
+            },
+            {
+                "name": "Part- A Answer",
+                "type": "file",
+                "id": 6796,
+                "downloaded": false
+            },
+            {
+                "name": "Comprehensive Keys (Part-B)",
+                "type": "file",
+                "id": 6819,
+                "downloaded": false
+            }
+        ]
+    },
+    {
+        "name": "MATH F113 PROBABILITY & STATISTICS T2",
+        "type": "course",
+        "id": 1116,
+        "teachers": [],
+        "remain enrolled": 1,
+        "contents": []
     }
 ]
