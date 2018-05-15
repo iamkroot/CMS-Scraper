@@ -30,6 +30,7 @@
 *.sublime-project
 *.sublime-workspace
 *.bak
+courses_db.json
 
 # OS generated files #
 ######################
