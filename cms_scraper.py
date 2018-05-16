@@ -9,7 +9,7 @@ import zipfile
 import rarfile
 
 sess = requests.Session()  # session to store cookies and remain logged in
-moodle_url = 'http://id.bits-hyderabad.ac.in/moodle/'
+moodle_url = 'https://id.bits-hyderabad.ac.in/moodle/'
 
 
 def get_config(path):
