@@ -30,6 +30,8 @@
 *.sublime-project
 *.sublime-workspace
 *.bak
+.vscode/*
+.venv/*
 courses_db.json
 
 # OS generated files #
