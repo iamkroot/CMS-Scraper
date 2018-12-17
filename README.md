@@ -3,6 +3,9 @@ Scrapes all contents of the Moodle CMS for BITS Pilani Hyderabad Campus. The mai
 1. `update_db`, which builds up the database for each file, getting its download link and other metadata.
 2. `download`, which is responsible for downloading the files in proper folder heirarchy.
 
+## DEPRECATED
+It is recommended to use the [Download Center Plugin](https://moodle.org/plugins/local_downloadcenter) by Moodle to achieve this functionality. This repo will no longer be maintained.
+
 ## Features
 - Option to either scrape the entire cms (using `get_all_courses`) or the ones you are currently enrolled to (using `get_enrolled_courses`).
     - `get_all_courses` also stores the course ids to a text file, to avoid having to scrape them every time.
