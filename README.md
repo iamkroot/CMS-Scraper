@@ -18,4 +18,4 @@ It is recommended to use the [Download Center Plugin](https://moodle.org/plugins
 2. Rename the `sample_config.ini` to `config.ini` and edit the necessary variables in it.
 	1. `root` refers to the directory where the contents have to be downloaded, can be absolute or relative.
 	2. Set the `unrar_path` to the location of UnRAR.exe after installing [Winrar](https://www.rarlab.com/download.htm). (Generally found at `C:\Program Files (x86)\WinRAR\UnRAR.exe` for Windows)
-	3. The `[CREDS]` section should have your login id and password for the CMS.
+	3. The `[CREDS]` section should have the `MoodleSession` cookie, which can be obtained once you have logged into CMS from your browser.

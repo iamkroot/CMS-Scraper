@@ -91,6 +91,13 @@ def login_google(email=None, password=None):
         exit(0)
 
 
+def login_cookie(sess_cookie):
+    sess.cookies.set('MoodleSession', sess_cookie,
+                     domain='td.bits-hyderabad.ac.in', path='/moodle')
+    resp = sess.get(moodle_url)
+    return resp.url.endswith('my/')
+
+
 def get_all_courses():
     """Scrape CMS and return list of IDS of courses."""
     print('Getting course IDS of all courses.', end=' ')
@@ -119,7 +126,7 @@ def get_enrolled_courses():
     url = moodle_url + 'my'
     resp = sess.get(url)
     soup = BeautifulSoup(resp.text, 'html.parser')
-    course_list = soup.find('aside', {'data-block': 'course_list'})
+    course_list = soup.find('section', {'data-block': 'course_list'})
     for course in course_list.find_all('li'):
         c_id = get_attr(course.find('a')['href'], '=', 1)
         ids.append(c_id)
@@ -131,6 +138,8 @@ def course_enrol(c_id, show_info=True):
     """Enrol into a course."""
     c_url = moodle_url + 'course/view.php'
     c = sess.get(c_url, params={'id': c_id})
+    if c.status_code != 200:
+        return -1
     if c.text[77:84] == 'Course:':
         print(f'Already enrolled to {c_id}.' * show_info)
         return 1
@@ -154,9 +163,13 @@ def course_unenrol(c_id, show_info=True):
     enrolid = get_attr(c.text, 'enrolid', 8)
     sesskey = get_attr(c.text, 'sesskey', 10)
     unenrol_url = moodle_url + 'enrol/self/unenrolself.php'
-    payload = {'enrolid': enrolid, 'confirm': '1', 'sesskey': sesskey}
-    sess.post(unenrol_url, data=payload)
-    print('Done.' * show_info, end=('', '\n')[show_info])
+    payload = {'enrolid': int(enrolid), 'confirm': '1', 'sesskey': sesskey}
+    head = {'Host': 'td.bits-hyderabad.ac.in'}
+    p = sess.post(unenrol_url, data=payload, headers=head)
+    if p.status_code != 200:
+        print('Failed')
+    else:
+        print('Done.' * show_info, end=('', '\n')[show_info])
 
 
 def get_teachers(c_id):
@@ -401,6 +414,10 @@ def main():
 config = get_config('config.ini')
 
 if __name__ == '__main__':
-    login_google(**config['CREDS'])
+    if not login_cookie(config['CREDS']['cookie']):
+        print("Failed to login from cookie. Maybe it expired.")
+        exit()
+    else:
+        print("Logged in.")
     # get_all_courses()  # required on first run to be able to scrape full CMS
     main()
